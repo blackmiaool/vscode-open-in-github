@@ -144,7 +144,9 @@ function openPrGitProvider(args) {
 //TODO: rename openInGitHub to openInGitProvider
 function activate(context) {
     context.subscriptions.push(commands.registerCommand('extension.openInGitHub', openInGitProvider));
+    context.subscriptions.push(commands.registerCommand('extension.openInGitHubWithLine', openInGitProvider.bind(undefined,undefined)));
     context.subscriptions.push(commands.registerCommand('extension.copyGitHubLinkToClipboard', copyGitProviderLinkToClipboard));
+    context.subscriptions.push(commands.registerCommand('extension.copyGitHubLinkToClipboardWithLine', copyGitProviderLinkToClipboard.bind(undefined,undefined)));
     context.subscriptions.push(commands.registerCommand('extension.openPrGitProvider', openPrGitProvider));
 }
 

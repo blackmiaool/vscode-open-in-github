@@ -27,7 +27,9 @@
   "activationEvents": [
     "onCommand:extension.openInGitHub",
     "onCommand:extension.copyGitHubLinkToClipboard",
-    "onCommand:extension.openPrGitProvider"
+    "onCommand:extension.openPrGitProvider",
+    "onCommand:extension.openInGitHubWithLine",
+    "onCommand:extension.copyGitHubLinkToClipboardWithLine"
   ],
   "main": "./src/extension",
   "contributes": {
@@ -37,7 +39,15 @@
         "title": "Open in GitHub"
       },
       {
+        "command": "extension.openInGitHubWithLine",
+        "title": "Open in GitHub"
+      },
+      {
         "command": "extension.copyGitHubLinkToClipboard",
+        "title": "Copy GitHub link to clipboard"
+      },
+      {
+        "command": "extension.copyGitHubLinkToClipboardWithLine",
         "title": "Copy GitHub link to clipboard"
       },
       {
@@ -100,6 +110,14 @@
         },
         {
           "command": "extension.openPrGitProvider"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "extension.openInGitHubWithLine"
+        },
+        {
+          "command": "extension.copyGitHubLinkToClipboardWithLine"
         }
       ]
     }
