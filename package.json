@@ -59,6 +59,11 @@
       "type": "object",
       "title": "Open in Github extension configuration",
       "properties": {
+        "openInGitHub.customBaseUrl":{
+          "type":"string",
+          "default":"",
+          "description":"For self-hosted Git service."
+        },
         "openInGitHub.gitHubDomain": {
           "type": [
             "string"
